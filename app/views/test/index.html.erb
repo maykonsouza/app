@@ -1,0 +1,14 @@
+<h1>Test#index</h1>
+<p>Find me in app/views/test/index.html.erb</p>
+
+
+<tbody>
+        <% @hosts.each do |host| %>
+          <tr>
+            <td><%= host.name %></td>
+            <td><%= host.address %></td>
+            <td><%= link_to 'Show', host %></td>
+            <td><%= link_to 'Edit', edit_host_path(host) %></td>
+            <td><%= link_to 'Destroy', host, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>

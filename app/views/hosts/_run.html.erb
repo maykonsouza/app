@@ -1,0 +1,28 @@
+
+<%# [name, address, avatar, latence, indicator, {1 => rtts[0], 2 => rtts[1], 3 => rtts[2], 4 => rtts[3], 5 => rtts[4]}] %>
+  <div class="row"> 
+    
+  <% @data.each do |data| %>
+    <div class="shadow p-3 mb-5 bg-white rounded mr-3 figure-img img-fluid">
+      <table>
+        <tbody>
+          <tr>
+            <td rowspan="2"><%= image_tag data[2] %></td>           
+              <td class="align-bottom"><p class="lead"><%= data[0] %></p></td>
+          </tr>
+            <tr>
+              <td class="align-top"><h5><small class="text-muted align-top "><%= data[1] %></small></h5></td>
+            </tr>
+          <tr>
+            <td colspan="2"><%= image_tag("https://www.hdm-cpa.com/wp-content/uploads/2014/03/350x250.gif", :alt => "rss feed") %></td>
+          </tr>
+          <tr>
+            <td class="align-middle"><p class="text-center">Latência: <strong><span class="text-<%= data[4][0] %>"><%= data[3] %>ms</span></strong></p></td>
+            <td class="align-middle"><p class="text-center">Qualidade: <span class="badge badge-<%= data[4][0] %>"><%= data[4][1] %></span> </p></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  <% end %>
+
+</div>

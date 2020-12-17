@@ -1,6 +1,40 @@
 class HostsController < ApplicationController
   before_action :set_host, only: [:show, :edit, :update, :destroy]
 
+  
+  def run
+    @host = Host.all
+
+    @data=[]
+    
+    @host.each do |host|
+      name = host.name
+      address = host.address
+      avatar = host.avatar.thumb.url
+      rtts = [10,15,35,13,46]
+      
+      # for i in 1..5
+       # result = `ping -c 3 #{address} | tail -1| awk '{print $4}' | cut -d '/' -f 2`.to_i
+        #rtts.push(result)
+      #end
+
+      latence = rtts.sum/rtts.length
+
+      if latence < 30
+        indicator = ["success", "Ótima"]
+      elsif latence > 30 and latence2 < 100
+          indicator = ["primary", "Boa"]
+      else
+        indicator = ["danger","Ruim"]
+      end
+
+      @data.push([name, address, avatar, latence, indicator, {1 => rtts[0], 2 => rtts[1], 3 => rtts[2], 4 => rtts[3], 5 => rtts[4]}])
+
+    end
+
+  end
+  
+  
   # GET /hosts
   # GET /hosts.json
   def index
