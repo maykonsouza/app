@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'hosts/run'
   get 'hosts/list'
   resources :hosts
