@@ -1,6 +1,9 @@
-<h1>Editing Host</h1>
 
-<%= render 'form', host: @host %>
 
-<%= link_to 'Show', @host %> |
-<%= link_to 'Back', hosts_path %>
+<div class="container">  
+    <p class="text-center h1">Editar Destino</p>
+    <%= render 'form', host: @host %>
+
+    <%= link_to 'Show', @host,  class:"btn btn-info", :style => 'color: white';%> |
+    <%= link_to 'Voltar', hosts_path, class:"btn btn-dark", :style => 'color: white';%>
+</div>
