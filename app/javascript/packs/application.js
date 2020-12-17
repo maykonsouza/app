@@ -12,9 +12,8 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-
-import "bootstrap";
 import "../stylesheets/application";
+import 'bootstrap/scss/bootstrap';
 
 document.addEventListener("turbolinks:load", function() {
     $(function () {

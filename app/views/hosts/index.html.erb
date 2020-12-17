@@ -1,35 +1,5 @@
-<div class="conteiner">
-  <div class="row">    
-    
-    <p id="notice"><%= notice %></p>
-
-    <h1>Hosts</h1>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Address</th>
-          <th colspan="3"></th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @hosts.each do |host| %>
-          <tr>
-            <td><%= host.name %></td>
-            <td><%= host.address %></td>
-            <td><%= link_to 'Show', host %></td>
-            <td><%= link_to 'Edit', edit_host_path(host) %></td>
-            <td><%= link_to 'Destroy', host, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-
-    <br>
-
-    <%= link_to 'New Host', new_host_path %>
-
- <div>
-<div>
+<div class="container">
+  <div class="col"> 
+    <%= render 'image', host: @host %>
+  </div>
+</div>
