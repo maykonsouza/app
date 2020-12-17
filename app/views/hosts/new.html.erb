@@ -1,5 +1,11 @@
-<h1>New Host</h1>
 
-<%= render 'form', host: @host %>
 
-<%= link_to 'Back', hosts_path %>
+
+
+
+<div class="container">  
+    <p class="text-center h1">Novo destino</p>
+    <%= render 'form', host: @host %>
+
+    <%= link_to 'Voltar', hosts_path, class:"btn btn-primary btn-sm", :style => 'color: white';%>
+</div>
