@@ -1,0 +1,32 @@
+<%= form_for(@host, multipart: true) do |form| %>
+  <% if host.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(host.errors.count, "error") %> prohibited this host from being saved:</h2>
+
+      <ul>
+        <% host.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :avatar %>
+    <%= form.file_field :avatar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
