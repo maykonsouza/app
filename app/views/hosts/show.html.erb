@@ -1,30 +1,26 @@
-<div class="conteiner">
-  <div class="row">
+<div class="container"> 
+<div class="d-flex justify-content-center"> 
+<div class="roe"> 
 
     <p id="notice"><%= notice %></p>
 
-    <%= image_tag @host.avatar.url(:thumb), class:'figure-img img-fluid rounded' %>
-    <%= image_tag @host.avatar.thumb.url %>
-    <%#= image_tag @host.avatar.url(:thumb) %>
+    <%= image_tag @host.avatar.url(:medium), class:'figure-img img-fluid rounded' %>
 
     <p>
-      <strong>Name:</strong>
+      <strong>Nome:</strong>
       <%= @host.name %>
     </p>
 
     <p>
-      <strong>Address:</strong>
+      <strong>Endereço:</strong>
       <%= @host.address %>
     </p>
 
-    <%= link_to 'Edit', edit_host_path(@host) %> |
-    <%= link_to 'Back', hosts_path %>
-
-    <figure class="figure">
-      <%= image_tag @host.avatar.thumb.url %>
-    </figure>
+    <%= link_to 'Show', @host,  class:"btn btn-info", :style => 'color: white';%> |
+    <%= link_to 'Voltar', hosts_path, class:"btn btn-dark", :style => 'color: white';%>
 
 
-  <div>
-<div>
+  </div>
+</div>
+</div>
 
