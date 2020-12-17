@@ -12,6 +12,10 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
+
+import "chartkick"
+import "chart.js"
+
 import "../stylesheets/application";
 import 'bootstrap/scss/bootstrap';
 
