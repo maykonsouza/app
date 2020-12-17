@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'hosts/run'
+  get 'hosts/list'
   resources :hosts
   get 'welcome', to: 'welcome#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

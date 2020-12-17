@@ -33,6 +33,10 @@ class HostsController < ApplicationController
     end
 
   end
+
+  def list
+    @hosts = Host.all
+  end
   
   
   # GET /hosts
