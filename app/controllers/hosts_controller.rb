@@ -28,7 +28,7 @@ class HostsController < ApplicationController
 
       if latence < 30
         indicator = ["success", "Ótima"]
-      elsif latence > 30 and latence2 < 100
+      elsif latence > 30 and latence < 100
           indicator = ["primary", "Boa"]
       else
         indicator = ["danger","Ruim"]
