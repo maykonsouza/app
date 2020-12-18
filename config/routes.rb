@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  get 'control_users/index'
+  #get 'control_users/index'
+  get 'admin', to: 'control_users#index'
+  root 'hosts#index'
+  
   devise_for :users
   get 'hosts/run'
   get 'hosts/list'
