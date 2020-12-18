@@ -13,9 +13,13 @@
 
         <div class="d-flex justify-content-between">
           <% @hosts.each do |host| %>
+              <div class='container'>
               <%= image_tag host.avatar.thumb.url, class:"text-center mx-auto  rounded img-thumbnail" %>
+              <div class='ml-1 container'>
+              <%= host.name%>
+              </div> 
               <%# <td><%= link_to 'Mostar', host, class:"btn btn-primary", :style => 'color: white';%>
-              
+               </div> 
           <% end %>
         </div> 
 
