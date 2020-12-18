@@ -2,8 +2,24 @@
   <div class="d-flex justify-content-center pb-5 align-top">
     <p id="notice"><%= notice %></p>
   </div>
+  <div class='container'>
+    <%= button_to 'Iniciar', hosts_run_path, method: :get, class: 'btn btn-primary btn-lg btn-block shadow-lg p-3 mb-5  rounded' %>
+  </div> 
+        <br>
+        <small class="text-muted ">
+        <h4 class="text-center">Aplicações prontas para serem testadas</h4>
+        </small>
+        <br>       
 
-  <%= button_to 'Iniciar', hosts_run_path, method: :get, class: 'btn btn-primary btn-lg btn-block shadow-lg p-3 mb-5  rounded' %>
+        <div class="d-flex justify-content-between">
+          <% @hosts.each do |host| %>
+              <%= image_tag host.avatar.thumb.url, class:"text-center mx-auto  rounded img-thumbnail" %>
+              <%# <td><%= link_to 'Mostar', host, class:"btn btn-primary", :style => 'color: white';%>
+              
+          <% end %>
+        </div> 
+
+
 
 </div>
 
