@@ -37,8 +37,7 @@ class HostsController < ApplicationController
 
   def list
     @hosts = Host.all
-    @users = User.all
-    authorize @users
+    authorize @hosts
   end
   
   
@@ -51,21 +50,21 @@ class HostsController < ApplicationController
   # GET /hosts/1
   # GET /hosts/1.json
   def show
-    @users = User.all
-    authorize @users
+    @hosts = Host.all
+    authorize @hosts
   end
 
   # GET /hosts/new
   def new
     @host = Host.new
-    @users = User.all
-    authorize @users
+    @hosts = Host.all
+    authorize @hosts
   end
 
   # GET /hosts/1/edit
   def edit
-    @users = User.all
-    authorize @users
+    @hosts = Host.all
+    authorize @hosts
   end
 
   # POST /hosts

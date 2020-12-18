@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :hosts
   #get 'control_users/index'
   get 'admin', to: 'control_users#index'
   root 'hosts#index'
