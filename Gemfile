@@ -8,6 +8,7 @@ gem 'mini_magick'
 
 gem "chartkick"
 gem 'devise'
+gem "pundit"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.0'

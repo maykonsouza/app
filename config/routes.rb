@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'control_users/index'
   devise_for :users
   get 'hosts/run'
   get 'hosts/list'
