@@ -12,12 +12,17 @@ class HostsController < ApplicationController
       name = host.name
       address = host.address
       avatar = host.avatar.thumb.url
-      rtts = [10,15,35,13,46]
+      rtts = []
       
       # for i in 1..5
        # result = `ping -c 3 #{address} | tail -1| awk '{print $4}' | cut -d '/' -f 2`.to_i
         #rtts.push(result)
       #end
+
+      for i in 1..5
+        result = `ping -n 1 #{address}`.force_encoding("iso-8859-1").split("tempo=")[1].split("ms")[0].to_i
+        rtts.push(result)
+      end
 
       latence = rtts.sum/rtts.length
 
